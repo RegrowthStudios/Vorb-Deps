@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8B9A66A-92D7-4FAB-8159-C93804CE84FC}</ProjectGuid>
+    <RootNamespace>ZLIB</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(PlatformTarget)\$(Configuration)\ZLIB\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(PlatformTarget)\$(Configuration)\ZLIB\</IntDir>
+    <TargetName>ZLIB</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(PlatformTarget)\$(Configuration)\ZLIB\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(PlatformTarget)\$(Configuration)\ZLIB\</IntDir>
+    <TargetName>ZLIB</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ZLIB\crc32.h" />
+    <ClInclude Include="..\include\ZLIB\crypt.h" />
+    <ClInclude Include="..\include\ZLIB\deflate.h" />
+    <ClInclude Include="..\include\ZLIB\gzguts.h" />
+    <ClInclude Include="..\include\ZLIB\inffast.h" />
+    <ClInclude Include="..\include\ZLIB\inffixed.h" />
+    <ClInclude Include="..\include\ZLIB\inflate.h" />
+    <ClInclude Include="..\include\ZLIB\inftrees.h" />
+    <ClInclude Include="..\include\ZLIB\ioapi.h" />
+    <ClInclude Include="..\include\ZLIB\iowin32.h" />
+    <ClInclude Include="..\include\ZLIB\mztools.h" />
+    <ClInclude Include="..\include\ZLIB\trees.h" />
+    <ClInclude Include="..\include\ZLIB\unzip.h" />
+    <ClInclude Include="..\include\ZLIB\zconf.h" />
+    <ClInclude Include="..\include\ZLIB\zip.h" />
+    <ClInclude Include="..\include\ZLIB\zlib.h" />
+    <ClInclude Include="..\include\ZLIB\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ZLIB\adler32.c" />
+    <ClCompile Include="ZLIB\compress.c" />
+    <ClCompile Include="ZLIB\crc32.c" />
+    <ClCompile Include="ZLIB\deflate.c" />
+    <ClCompile Include="ZLIB\gzclose.c" />
+    <ClCompile Include="ZLIB\gzlib.c" />
+    <ClCompile Include="ZLIB\gzread.c" />
+    <ClCompile Include="ZLIB\gzwrite.c" />
+    <ClCompile Include="ZLIB\infback.c" />
+    <ClCompile Include="ZLIB\inffast.c" />
+    <ClCompile Include="ZLIB\inflate.c" />
+    <ClCompile Include="ZLIB\inftrees.c" />
+    <ClCompile Include="ZLIB\ioapi.c" />
+    <ClCompile Include="ZLIB\iowin32.c" />
+    <ClCompile Include="ZLIB\miniunz.c" />
+    <ClCompile Include="ZLIB\mztools.c" />
+    <ClCompile Include="ZLIB\trees.c" />
+    <ClCompile Include="ZLIB\uncompr.c" />
+    <ClCompile Include="ZLIB\unzip.c" />
+    <ClCompile Include="ZLIB\zip.c" />
+    <ClCompile Include="ZLIB\zutil.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
