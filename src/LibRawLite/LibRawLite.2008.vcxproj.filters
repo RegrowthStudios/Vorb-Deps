@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\internal">
+      <UniqueIdentifier>{92b57895-67cf-4bfe-b840-ac8d631a8142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\libraw">
+      <UniqueIdentifier>{4e84b9f8-8bb4-4981-9e8d-b0932e8c472b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\internal">
+      <UniqueIdentifier>{fa4f147f-4b72-4ede-ab61-2ab995344150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\libraw">
+      <UniqueIdentifier>{49943160-53c8-4200-9d4f-eaa34e3a81a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="internal\dcraw_common.cpp">
+      <Filter>Source Files\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="internal\dcraw_fileio.cpp">
+      <Filter>Source Files\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="internal\demosaic_packs.cpp">
+      <Filter>Source Files\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libraw_c_api.cpp">
+      <Filter>Source Files\libraw</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libraw_cxx.cpp">
+      <Filter>Source Files\libraw</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libraw_datastream.cpp">
+      <Filter>Source Files\libraw</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="internal\defines.h">
+      <Filter>Header Files\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\libraw_bytebuffer.h">
+      <Filter>Header Files\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\libraw_internal_funcs.h">
+      <Filter>Header Files\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="internal\var_defines.h">
+      <Filter>Header Files\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="libraw\libraw.h">
+      <Filter>Header Files\libraw</Filter>
+    </ClInclude>
+    <ClInclude Include="libraw\libraw_alloc.h">
+      <Filter>Header Files\libraw</Filter>
+    </ClInclude>
+    <ClInclude Include="libraw\libraw_const.h">
+      <Filter>Header Files\libraw</Filter>
+    </ClInclude>
+    <ClInclude Include="libraw\libraw_datastream.h">
+      <Filter>Header Files\libraw</Filter>
+    </ClInclude>
+    <ClInclude Include="libraw\libraw_internal.h">
+      <Filter>Header Files\libraw</Filter>
+    </ClInclude>
+    <ClInclude Include="libraw\libraw_types.h">
+      <Filter>Header Files\libraw</Filter>
+    </ClInclude>
+    <ClInclude Include="libraw\libraw_version.h">
+      <Filter>Header Files\libraw</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
