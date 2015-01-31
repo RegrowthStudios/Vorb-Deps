@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{3C1E0070-34FE-4509-9698-7A8454690E6C}</ProjectGUID>
+    <ProjectGUID>{2AD47527-F044-42AA-A6C4-4B719F9B03D2}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
-    <ProjectName>BulletDynamics</ProjectName>
+    <ProjectName>LinearMath</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -58,30 +58,30 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)bin\$(PlatformName)\$(Configuration)\Bullet\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)obj\$(PlatformName)\$(Configuration)\BulletDynamics\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">BulletDynamics_Debug</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">BulletDynamics_Debug</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">LinearMath-d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">LinearMath-d</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)bin\$(PlatformName)\$(Configuration)\Bullet\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)obj\$(PlatformName)\$(Configuration)\BulletDynamics\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">BulletDynamics</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">BulletDynamics</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">LinearMath</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">LinearMath</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(Configuration)\Bullet\</OutDir>
-    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\BulletDynamics\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(Configuration)\Bullet\</OutDir>
-    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\BulletDynamics\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -113,7 +113,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -124,7 +124,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_DEBUG;_DEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;BT_USE_FREEGLUT;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -145,7 +145,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\bullet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
@@ -186,7 +186,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>
@@ -208,97 +208,44 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="BulletCollision.vcxproj">
-      <Project>{710351a5-9ee4-4a35-9c2c-37978ba08593}</Project>
-    </ProjectReference>
-    <ProjectReference Include="LinearMath.vcxproj">
-      <Project>{2ad47527-f044-42aa-a6c4-4b719f9b03d2}</Project>
-    </ProjectReference>
+    <ClInclude Include="..\..\include\bullet\LinearMath\btAabbUtil2.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btAlignedAllocator.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btAlignedObjectArray.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btConvexHull.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btConvexHullComputer.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btCpuFeatureUtility.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btDefaultMotionState.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btGeometryUtil.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btGrahamScan2dConvexHull.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btHashMap.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btIDebugDraw.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btList.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btMatrix3x3.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btMatrixX.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btMinMax.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btMotionState.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btPolarDecomposition.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btPoolAllocator.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btQuadWord.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btQuaternion.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btQuickprof.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btRandom.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btScalar.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btSerializer.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btStackAlloc.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btTransform.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btTransformUtil.h" />
+    <ClInclude Include="..\..\include\bullet\LinearMath\btVector3.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\bullet\BulletDynamics\Character\btCharacterControllerInterface.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Character\btKinematicCharacterController.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btConeTwistConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btConstraintSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btContactConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btContactSolverInfo.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btFixedConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGearConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofSpring2Constraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btHinge2Constraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btHingeConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btJacobianEntry.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btNNCGConstraintSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSliderConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSolverBody.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSolverConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btTypedConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\ConstraintSolver\btUniversalConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Dynamics\btActionInterface.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Dynamics\btDynamicsWorld.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Dynamics\btRigidBody.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Dynamics\btSimpleDynamicsWorld.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBody.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyJointMotor.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyLink.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyLinkCollider.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodySolverConstraint.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btDantzigLCP.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btDantzigSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btLemkeAlgorithm.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btLemkeSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btMLCPSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btMLCPSolverInterface.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btPATHSolver.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\MLCPSolvers\btSolveProjectedGaussSeidel.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Vehicle\btRaycastVehicle.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Vehicle\btVehicleRaycaster.h" />
-    <ClInclude Include="..\include\bullet\BulletDynamics\Vehicle\btWheelInfo.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\include\bullet\BulletDynamics\Character\btKinematicCharacterController.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btContactConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGearConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofSpring2Constraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btNNCGConstraintSolver.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Dynamics\btRigidBody.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBody.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyConstraintSolver.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyDynamicsWorld.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyJointMotor.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\MLCPSolvers\btDantzigLCP.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\MLCPSolvers\btLemkeAlgorithm.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\MLCPSolvers\btMLCPSolver.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Vehicle\btRaycastVehicle.cpp" />
-    <ClCompile Include="..\include\bullet\BulletDynamics\Vehicle\btWheelInfo.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btAlignedAllocator.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btConvexHull.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btConvexHullComputer.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btGeometryUtil.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btPolarDecomposition.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btQuickprof.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btSerializer.cpp" />
+    <ClCompile Include="..\..\include\bullet\LinearMath\btVector3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

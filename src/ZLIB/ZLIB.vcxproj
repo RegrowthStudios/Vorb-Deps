@@ -66,31 +66,31 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(Configuration)\ZLIB\</OutDir>
-    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\ZLIB\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
     <TargetName>ZLIB-d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>ZLIB-d</TargetName>
-    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(Configuration)\ZLIB\</OutDir>
-    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\ZLIB\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(Configuration)\ZLIB\</OutDir>
-    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\ZLIB\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
     <TargetName>ZLIB</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>ZLIB</TargetName>
-    <OutDir>$(ProjectDir)bin\$(PlatformName)\$(Configuration)\ZLIB\</OutDir>
-    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\ZLIB\</IntDir>
+    <OutDir>$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(PlatformName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -106,7 +106,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -124,7 +124,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -144,7 +144,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\include\ZLIB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
@@ -158,56 +158,56 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\ZLIB\crc32.h" />
-    <ClInclude Include="..\include\ZLIB\crypt.h" />
-    <ClInclude Include="..\include\ZLIB\deflate.h" />
-    <ClInclude Include="..\include\ZLIB\gzguts.h" />
-    <ClInclude Include="..\include\ZLIB\inffast.h" />
-    <ClInclude Include="..\include\ZLIB\inffixed.h" />
-    <ClInclude Include="..\include\ZLIB\inflate.h" />
-    <ClInclude Include="..\include\ZLIB\inftrees.h" />
-    <ClInclude Include="..\include\ZLIB\ioapi.h" />
-    <ClInclude Include="..\include\ZLIB\iowin32.h" />
-    <ClInclude Include="..\include\ZLIB\mztools.h" />
-    <ClInclude Include="..\include\ZLIB\trees.h" />
-    <ClInclude Include="..\include\ZLIB\unzip.h" />
-    <ClInclude Include="..\include\ZLIB\zconf.h" />
-    <ClInclude Include="..\include\ZLIB\zip.h" />
-    <ClInclude Include="..\include\ZLIB\zlib.h" />
-    <ClInclude Include="..\include\ZLIB\zutil.h" />
+    <ClInclude Include="..\..\include\ZLIB\crc32.h" />
+    <ClInclude Include="..\..\include\ZLIB\crypt.h" />
+    <ClInclude Include="..\..\include\ZLIB\deflate.h" />
+    <ClInclude Include="..\..\include\ZLIB\gzguts.h" />
+    <ClInclude Include="..\..\include\ZLIB\inffast.h" />
+    <ClInclude Include="..\..\include\ZLIB\inffixed.h" />
+    <ClInclude Include="..\..\include\ZLIB\inflate.h" />
+    <ClInclude Include="..\..\include\ZLIB\inftrees.h" />
+    <ClInclude Include="..\..\include\ZLIB\ioapi.h" />
+    <ClInclude Include="..\..\include\ZLIB\iowin32.h" />
+    <ClInclude Include="..\..\include\ZLIB\mztools.h" />
+    <ClInclude Include="..\..\include\ZLIB\trees.h" />
+    <ClInclude Include="..\..\include\ZLIB\unzip.h" />
+    <ClInclude Include="..\..\include\ZLIB\zconf.h" />
+    <ClInclude Include="..\..\include\ZLIB\zip.h" />
+    <ClInclude Include="..\..\include\ZLIB\zlib.h" />
+    <ClInclude Include="..\..\include\ZLIB\zutil.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ZLIB\adler32.c" />
-    <ClCompile Include="ZLIB\compress.c" />
-    <ClCompile Include="ZLIB\crc32.c" />
-    <ClCompile Include="ZLIB\deflate.c" />
-    <ClCompile Include="ZLIB\gzclose.c" />
-    <ClCompile Include="ZLIB\gzlib.c" />
-    <ClCompile Include="ZLIB\gzread.c" />
-    <ClCompile Include="ZLIB\gzwrite.c" />
-    <ClCompile Include="ZLIB\infback.c" />
-    <ClCompile Include="ZLIB\inffast.c" />
-    <ClCompile Include="ZLIB\inflate.c" />
-    <ClCompile Include="ZLIB\inftrees.c" />
-    <ClCompile Include="ZLIB\ioapi.c" />
-    <ClCompile Include="ZLIB\iowin32.c" />
-    <ClCompile Include="ZLIB\miniunz.c">
+    <ClCompile Include="adler32.c" />
+    <ClCompile Include="compress.c" />
+    <ClCompile Include="crc32.c" />
+    <ClCompile Include="deflate.c" />
+    <ClCompile Include="gzclose.c" />
+    <ClCompile Include="gzlib.c" />
+    <ClCompile Include="gzread.c" />
+    <ClCompile Include="gzwrite.c" />
+    <ClCompile Include="infback.c" />
+    <ClCompile Include="inffast.c" />
+    <ClCompile Include="inflate.c" />
+    <ClCompile Include="inftrees.c" />
+    <ClCompile Include="ioapi.c" />
+    <ClCompile Include="iowin32.c" />
+    <ClCompile Include="miniunz.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ZLIB\mztools.c" />
-    <ClCompile Include="ZLIB\trees.c" />
-    <ClCompile Include="ZLIB\uncompr.c" />
-    <ClCompile Include="ZLIB\unzip.c" />
-    <ClCompile Include="ZLIB\zip.c">
+    <ClCompile Include="mztools.c" />
+    <ClCompile Include="trees.c" />
+    <ClCompile Include="uncompr.c" />
+    <ClCompile Include="unzip.c" />
+    <ClCompile Include="zip.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ZLIB\zutil.c" />
+    <ClCompile Include="zutil.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
