@@ -55,7 +55,7 @@
 /* #undef _GLFW_NSGL */
 
 // Define this to 1 if building as a shared library / dynamic library / DLL
-#define _GLFW_BUILD_DLL
+// #define _GLFW_BUILD_DLL
 
 // Define this to 1 if glfwSwapInterval should ignore DWM compositing status
 /* #undef _GLFW_USE_DWM_SWAP_INTERVAL */
