@@ -30,7 +30,7 @@ public:
     virtual void calculateLocalInertia(btScalar mass, btVector3& inertia) const = 0;
     virtual void clampTraversal(btVoxelWorldIndex& min, btVoxelWorldIndex& max) const = 0;
 
-    virtual btVoxelCollisionPiece* getCollisionObject(const btVoxelWorldIndex& pos) const = 0;
+    virtual const btVoxelCollisionPiece* getCollisionObject(const btVoxelWorldIndex& pos) const = 0;
 };
 
 class btVoxelShape : public btCollisionShape {

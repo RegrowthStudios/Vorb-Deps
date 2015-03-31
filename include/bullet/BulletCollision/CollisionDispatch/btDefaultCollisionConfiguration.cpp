@@ -179,7 +179,12 @@ btDefaultCollisionConfiguration::~btDefaultCollisionConfiguration()
 	btAlignedFree( m_emptyCreateFunc);
 
 	m_sphereSphereCF->~btCollisionAlgorithmCreateFunc();
-	btAlignedFree( m_sphereSphereCF);
+    btAlignedFree(m_sphereSphereCF);
+
+    m_voxelSphereCF->~btCollisionAlgorithmCreateFunc();
+    btAlignedFree( m_voxelSphereCF);
+    m_voxelSphereSwappedCF->~btCollisionAlgorithmCreateFunc();
+    btAlignedFree( m_voxelSphereSwappedCF);
 
 #ifdef USE_BUGGY_SPHERE_BOX_ALGORITHM
 	m_sphereBoxCF->~btCollisionAlgorithmCreateFunc();

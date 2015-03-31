@@ -22,9 +22,9 @@ subject to the following restrictions:
 #include "BulletCollision/CollisionShapes/btVoxelShape.h"
 #define USE_PERSISTENT_CONTACTS 1
 
-btVoxelSphereCollisionAlgorithm::btVoxelSphereCollisionAlgorithm(bool swap, btPersistentManifold* mf, const btCollisionAlgorithmConstructionInfo& ci, const btCollisionObjectWrapper* body0Wrap, const btCollisionObjectWrapper* body1Wrap)
+btVoxelSphereCollisionAlgorithm::btVoxelSphereCollisionAlgorithm(bool _swap, btPersistentManifold* mf, const btCollisionAlgorithmConstructionInfo& ci, const btCollisionObjectWrapper* body0Wrap, const btCollisionObjectWrapper* body1Wrap)
 : btActivatingCollisionAlgorithm(ci,body0Wrap,body1Wrap),
-    swap(swap) {
+    swap(_swap) {
 	if (!m_manifoldPtr && m_dispatcher->needsCollision(body0Wrap->getCollisionObject(),body1Wrap->getCollisionObject()))
 	{
 		m_manifoldPtr = m_dispatcher->getNewManifold(body0Wrap->getCollisionObject(),body1Wrap->getCollisionObject());
@@ -56,8 +56,8 @@ void btVoxelSphereCollisionAlgorithm::processCollision(const btCollisionObjectWr
     /* START CUSTOM COLLISION CODE                                          */
     /************************************************************************/
     
-    const btCollisionObjectWrapper* chunk = swap ? b1 : b0;
-    const btCollisionObjectWrapper* body = swap ? b0 : b1;
+    const btCollisionObjectWrapper* chunk = b1->getCollisionShape()->getShapeType() == VOXEL_WORLD_PROXYTYPE ? b1 : b0;
+    const btCollisionObjectWrapper* body = chunk == b1 ? b0 : b1;
     
     btVoxelShape* voxShape = (btVoxelShape*)chunk->getCollisionShape();
     btIVoxelAPI* voxAPI = voxShape->world;
@@ -87,7 +87,7 @@ void btVoxelSphereCollisionAlgorithm::processCollision(const btCollisionObjectWr
         for (vi.z = cMin.z; vi.z <= cMax.z; vi.z++) {
             for (vi.x = cMin.x; vi.x <= cMax.x; vi.x++) {
                 auto co = voxAPI->getCollisionObject(vi);
-                if (!co->shape) continue;
+                if (!co) continue;
 
                 // Move shape to voxel position
                 teleportTransform.setOrigin(origin + (basis * (btVector3((btScalar)vi.x, (btScalar)vi.y, (btScalar)vi.z) + co->offset)));
