@@ -24,7 +24,7 @@ subject to the following restrictions:
 
 btVoxelSphereCollisionAlgorithm::btVoxelSphereCollisionAlgorithm(bool _swap, btPersistentManifold* mf, const btCollisionAlgorithmConstructionInfo& ci, const btCollisionObjectWrapper* body0Wrap, const btCollisionObjectWrapper* body1Wrap)
 : btActivatingCollisionAlgorithm(ci,body0Wrap,body1Wrap),
-    swap(_swap) {
+    swap(_swap), m_manifoldPtr(mf), m_ownManifold(false) {
 	if (!m_manifoldPtr && m_dispatcher->needsCollision(body0Wrap->getCollisionObject(),body1Wrap->getCollisionObject()))
 	{
 		m_manifoldPtr = m_dispatcher->getNewManifold(body0Wrap->getCollisionObject(),body1Wrap->getCollisionObject());
