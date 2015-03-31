@@ -35,3 +35,8 @@ const char* btVoxelShape::getName() const {
 void btVoxelShape::calculateLocalInertia(btScalar mass, btVector3& inertia) const {
     world->calculateLocalInertia(mass, inertia);
 }
+
+void btVoxelShape::processAllTriangles(btTriangleCallback* callback, const btVector3& aabbMin, const btVector3& aabbMax) const {
+    // TODO(Cristian): More API stuff
+    return;
+}

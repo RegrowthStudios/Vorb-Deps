@@ -33,7 +33,7 @@ public:
     virtual const btVoxelCollisionPiece* getCollisionObject(const btVoxelWorldIndex& pos) const = 0;
 };
 
-class btVoxelShape : public btCollisionShape {
+class btVoxelShape : public btConcaveShape {
 public:
     btVoxelShape(btIVoxelAPI* chunk);
 
@@ -44,6 +44,8 @@ public:
     virtual const btVector3& getLocalScaling() const;
     virtual const char* getName() const;
     virtual void calculateLocalInertia(btScalar mass, btVector3& inertia) const;
+
+    virtual void processAllTriangles(btTriangleCallback* callback, const btVector3& aabbMin, const btVector3& aabbMax) const;
 
     btIVoxelAPI* world;
 };
