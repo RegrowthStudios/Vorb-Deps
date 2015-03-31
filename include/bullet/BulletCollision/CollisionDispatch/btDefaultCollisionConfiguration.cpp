@@ -20,6 +20,7 @@ subject to the following restrictions:
 #include "BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.h"
 #include "BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.h"
 #include "BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.h"
+#include "BulletCollision/CollisionDispatch/btVoxelSphereCollisionAlgorithm.h"
 
 #include "BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.h"
 #include "BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.h"
@@ -95,11 +96,19 @@ btDefaultCollisionConfiguration::btDefaultCollisionConfiguration(const btDefault
 	m_boxBoxCF = new(mem)btBoxBoxCollisionAlgorithm::CreateFunc;
 
 	//convex versus plane
-	mem = btAlignedAlloc (sizeof(btConvexPlaneCollisionAlgorithm::CreateFunc),16);
-	m_convexPlaneCF = new (mem) btConvexPlaneCollisionAlgorithm::CreateFunc;
-	mem = btAlignedAlloc (sizeof(btConvexPlaneCollisionAlgorithm::CreateFunc),16);
-	m_planeConvexCF = new (mem) btConvexPlaneCollisionAlgorithm::CreateFunc;
-	m_planeConvexCF->m_swapped = true;
+    mem = btAlignedAlloc(sizeof(btConvexPlaneCollisionAlgorithm::CreateFunc), 16);
+    m_convexPlaneCF = new (mem)btConvexPlaneCollisionAlgorithm::CreateFunc;
+    mem = btAlignedAlloc(sizeof(btConvexPlaneCollisionAlgorithm::CreateFunc), 16);
+    m_planeConvexCF = new (mem)btConvexPlaneCollisionAlgorithm::CreateFunc;
+    m_planeConvexCF->m_swapped = true;
+
+    mem = btAlignedAlloc(sizeof(btVoxelSphereCollisionAlgorithm::CreateFunc), 16);
+    m_voxelSphereCF = new (mem)btVoxelSphereCollisionAlgorithm::CreateFunc;
+    m_voxelSphereCF->m_swapped = false;
+    mem = btAlignedAlloc(sizeof(btVoxelSphereCollisionAlgorithm::CreateFunc), 16);
+    m_voxelSphereSwappedCF = new (mem)btVoxelSphereCollisionAlgorithm::CreateFunc;
+    m_voxelSphereSwappedCF->m_swapped = true;
+
 	
 	///calculate maximum element size, big enough to fit any collision algorithm in the memory pool
 	int maxSize = sizeof(btConvexConvexAlgorithm);
@@ -238,6 +247,21 @@ btCollisionAlgorithmCreateFunc* btDefaultCollisionConfiguration::getCollisionAlg
 	{
 		return m_boxBoxCF;
 	}
+
+    if ((proxyType0 == VOXEL_WORLD_PROXYTYPE)) {
+        if (proxyType1 == SPHERE_SHAPE_PROXYTYPE) {
+            return m_voxelSphereCF;
+        } else {
+            return m_emptyCreateFunc;
+        }
+    }
+    if ((proxyType1 == VOXEL_WORLD_PROXYTYPE)) {
+        if (proxyType0 == SPHERE_SHAPE_PROXYTYPE) {
+            return m_voxelSphereSwappedCF;
+        } else {
+            return m_emptyCreateFunc;
+        }
+    }
 	
 	if (btBroadphaseProxy::isConvex(proxyType0) && (proxyType1 == STATIC_PLANE_PROXYTYPE))
 	{

@@ -249,6 +249,7 @@
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btUnionFind.h" />
+    <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btVoxelSphereCollisionAlgorithm.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionDispatch\SphereTriangleDetector.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionShapes\btBox2dShape.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionShapes\btBoxShape.h" />
@@ -290,6 +291,7 @@
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionShapes\btTriangleMeshShape.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionShapes\btTriangleShape.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionShapes\btUniformScalingShape.h" />
+    <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionShapes\btVoxelShape.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\Gimpact\btBoxCollision.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\Gimpact\btClipPolygon.h" />
     <ClInclude Include="..\..\include\bullet\BulletCollision\Gimpact\btCompoundFromGimpact.h" />
@@ -375,6 +377,7 @@
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btUnionFind.cpp" />
+    <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btVoxelSphereCollisionAlgorithm.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btBox2dShape.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btBoxShape.cpp" />
@@ -412,6 +415,7 @@
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btTriangleMesh.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btUniformScalingShape.cpp" />
+    <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btVoxelShape.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\Gimpact\btContactProcessing.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\Gimpact\btGenericPoolAllocator.cpp" />
     <ClCompile Include="..\..\include\bullet\BulletCollision\Gimpact\btGImpactBvh.cpp" />

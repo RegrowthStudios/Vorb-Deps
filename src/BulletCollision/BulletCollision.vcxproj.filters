@@ -402,6 +402,12 @@
     <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionDispatch\SphereTriangleDetector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btVoxelSphereCollisionAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\bullet\BulletCollision\CollisionShapes\btVoxelShape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp">
@@ -684,6 +690,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionDispatch\btVoxelSphereCollisionAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\bullet\BulletCollision\CollisionShapes\btVoxelShape.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
