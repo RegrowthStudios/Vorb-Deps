@@ -19,7 +19,9 @@
  uses template member functions for MSCVER>=1300)
  *
  *  Modified by: Matthew Marshall on 2nd July, 2016.
- *          (check actual equality for duplicates instead of checking by indexing method)
+ *          (check actual equality for duplicates instead of checking by indexing method;
+             similarly use equality for find();
+             fix a set of bugs that make this not work in modern VS.)
  */
 
 #ifndef SORTED_VECTOR_
